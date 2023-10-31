@@ -1,0 +1,29 @@
+<i class="fa-solid fa-cloud"></i> 70-90
+<i class="fa-solid fa-bolt"></i>
+<i class="fa-solid fa-sun"></i>  0-10 20-30
+<i class="fa-solid fa-wind"></i> 10-20
+<i class="fa-solid fa-cloud-sun"></i> 30-70
+<i class="fa-solid fa-cloud-sun-rain"></i> 90-100
+
+
+
+
+<i class="fa-solid fa-tornado"></i> 
+<i class="fa-solid fa-temperature-half"></i>
+<i class="fa-solid fa-smog"></i>
+<i class="fa-solid fa-cloud-bolt"></i>
+<i class="fa-regular fa-snowflake"></i>
+<i class="fa-solid fa-water"></i>
+<i class="fa-solid fa-cloud-rain"></i>
+<i class="fa-solid fa-cloud-sun-rain"></i>
+<i class="fa-solid fa-cloud-showers-heavy"></i>
+
+<i class="fa-brands fa-spotify"></i>
+
+<i class="fa-solid fa-magnifying-glass"></i>
+<i class="fa-solid fa-microphone"></i>
+<i class="fa-solid fa-camera"></i>
+<i class="fa-solid fa-xmark"></i>
+
+<i class="fa-solid fa-wifi"></i>
+

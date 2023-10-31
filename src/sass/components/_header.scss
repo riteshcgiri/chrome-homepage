@@ -1,0 +1,262 @@
+@import '../variables/variables';
+
+
+.header{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    &__video{
+        z-index: 2;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .screen{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        font-size: 16px;
+        z-index: 3;
+        background: rgba(0,0,0,.2);
+        padding: 3rem 10%;
+        overflow-y: auto;
+    }
+
+    .my-logo{
+        user-select: none;
+        width: 41%;
+        margin: 4rem auto;
+        margin-top: 2rem;
+        span{
+            display: inline-flex;
+            margin-top: .5rem;
+            margin-right: .2rem;
+            justify-content: center;
+            align-items: center;
+            font-size: 3rem;
+            width: 70px;
+            height: 70px;
+            color: $color-white;
+            background: rgba($color-30,.2);
+            font-weight: 300;
+            &:nth-child(1){
+                border-radius: 5px 0 0 5px;
+            }
+            &:nth-child(6){
+                border-radius:0 5px 5px 0;
+            }
+            &:nth-child(7){
+                // margin-left: 78px;
+                margin-left: 4.9rem;
+                border-radius:0 0 0 5px;
+
+            }
+            &:nth-child(10){
+                border-radius:0 0 5px 0;
+            }
+            
+
+        }
+    }
+
+
+    .tab{
+        &__list{
+            margin-bottom: 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: .5rem;
+
+        }
+        &__item{
+            // height: 100px;
+            color: $color-white;
+            background: rgba($color-10,.2);
+            backdrop-filter: blur(15px);
+            padding: 1rem;
+            &:first-child{
+                border-radius: 1rem 0 0 1rem;
+            }
+            &:last-child{
+                border-radius:0 1rem 1rem 0;
+            }
+            &.searched{
+                overflow: hidden;
+                word-wrap: break-word;
+                span{
+                    font-size: 1.7rem;
+                }
+                ul{
+                    list-style: none;
+                    margin: .5rem;
+                }
+            }
+
+
+            .weather{
+                display: grid;
+                gap: 0.5rem;
+                grid-template-columns: repeat(6, 1fr);
+                *{
+                    // border: 1px solid red;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+                &__icon{
+                    font-size: 2rem;
+                    grid-column: span 3 ;
+                }
+                &__type{
+                    grid-column: span 3 ;
+                    font-size: 2.5rem;
+                }
+                &__loc{
+                    grid-column: span 3 ;
+                }
+                &__temp{
+                    grid-column: span 3 ;
+                    grid-row: span 2;
+                    font-size: 3rem;
+                }
+                &__wind{
+                    grid-column: span 3;
+                    font-size: .8rem;
+                }
+                &__min,
+                &__max{
+                    grid-column: span 3;
+                    font-size: 1.2rem;
+                    .fa-solid{
+                        margin-right: .5rem;
+                        font-size: 1.2rem;
+                    }
+                }
+                
+                
+            }
+            &.connection{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+                .bi{
+                    position: absolute;
+                    width: 6rem;
+                    path{
+                        fill: $color-white;
+                    }
+                    &-wifi-off{
+                        path{
+                            fill: #ff681e;
+                        }
+                    }
+                    &-wifi-1{
+                        path{
+                            fill: #d3212c;
+                        }
+                    }
+                    &-wifi-2{
+                        path{
+                            fill: #066b3d;
+                        }
+                    }
+                    &-wifi{
+                        path{
+                            fill:#069c56;
+                        }
+                    }
+                    &.hidden-cell{
+                        display: none;
+                    }
+
+                }
+                .status{
+                    color: #ff681e;
+                    margin-top: 40%;
+                }
+            }
+        }
+    }
+    .search{
+        width: 70%;
+        margin: 5rem auto;
+        display: flex;
+        padding:.5rem;
+        border-radius: 5rem;
+        background: rgba($color-10,.2);
+        backdrop-filter: blur(5px);
+        overflow: hidden;
+        i{
+            color: $color-white;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            cursor: pointer;
+        }
+        
+        &__box{
+            width: calc(66rem + 50px);
+            input{
+                all: unset;
+                width: 100%;
+                height: 100%;
+                background: transparent;
+                color: $color-white;
+                
+    
+            }
+        }
+        &__clear{
+            display: none;
+        }
+    }
+    .row{
+        ul{
+            list-style: none;
+            color: $color-white;
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: .5rem;
+            li{
+                border-radius: inherit;
+                padding: 2.5rem;
+                background: rgba($color-10,.2);
+                backdrop-filter: blur(5px);
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            i{
+                font-size: 2rem;
+            }                        
+            span{
+                font-size: 1.7rem;
+            }
+            &:hover{
+                background: rgba($color-10,.5);
+            }
+
+            }
+
+            a {
+                &:nth-child(1){
+                    border-radius: .5rem 0 0 0;
+                }
+                &:nth-child(4){
+                        border-radius: 0 .5rem 0 0;
+                }
+                &:nth-child(13){
+                    border-radius: 0 0 0 .5rem ;
+                }
+                &:nth-child(16){
+                border-radius: 0 0 .5rem 0;
+                }
+            }
+        }
+    }
+}

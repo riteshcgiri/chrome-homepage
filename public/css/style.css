@@ -1,0 +1,247 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+.header {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+.header__video {
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.header .screen {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  font-size: 16px;
+  z-index: 3;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 3rem 10%;
+  overflow-y: auto;
+}
+.header .my-logo {
+  user-select: none;
+  width: 41%;
+  margin: 4rem auto;
+  margin-top: 2rem;
+}
+.header .my-logo span {
+  display: inline-flex;
+  margin-top: 0.5rem;
+  margin-right: 0.2rem;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  width: 70px;
+  height: 70px;
+  color: #fff;
+  background: rgba(67, 113, 188, 0.2);
+  font-weight: 300;
+}
+.header .my-logo span:nth-child(1) {
+  border-radius: 5px 0 0 5px;
+}
+.header .my-logo span:nth-child(6) {
+  border-radius: 0 5px 5px 0;
+}
+.header .my-logo span:nth-child(7) {
+  margin-left: 4.9rem;
+  border-radius: 0 0 0 5px;
+}
+.header .my-logo span:nth-child(10) {
+  border-radius: 0 0 5px 0;
+}
+.header .tab__list {
+  margin-bottom: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 0.5rem;
+}
+.header .tab__item {
+  color: #fff;
+  background: rgba(81, 67, 188, 0.2);
+  backdrop-filter: blur(15px);
+  padding: 1rem;
+}
+.header .tab__item:first-child {
+  border-radius: 1rem 0 0 1rem;
+}
+.header .tab__item:last-child {
+  border-radius: 0 1rem 1rem 0;
+}
+.header .tab__item.searched {
+  overflow: hidden;
+  word-wrap: break-word;
+}
+.header .tab__item.searched span {
+  font-size: 1.7rem;
+}
+.header .tab__item.searched ul {
+  list-style: none;
+  margin: 0.5rem;
+}
+.header .tab__item .weather {
+  display: grid;
+  gap: 0.5rem;
+  grid-template-columns: repeat(6, 1fr);
+}
+.header .tab__item .weather * {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header .tab__item .weather__icon {
+  font-size: 2rem;
+  grid-column: span 3;
+}
+.header .tab__item .weather__type {
+  grid-column: span 3;
+  font-size: 2.5rem;
+}
+.header .tab__item .weather__loc {
+  grid-column: span 3;
+}
+.header .tab__item .weather__temp {
+  grid-column: span 3;
+  grid-row: span 2;
+  font-size: 3rem;
+}
+.header .tab__item .weather__wind {
+  grid-column: span 3;
+  font-size: 0.8rem;
+}
+.header .tab__item .weather__min, .header .tab__item .weather__max {
+  grid-column: span 3;
+  font-size: 1.2rem;
+}
+.header .tab__item .weather__min .fa-solid, .header .tab__item .weather__max .fa-solid {
+  margin-right: 0.5rem;
+  font-size: 1.2rem;
+}
+.header .tab__item.connection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.header .tab__item.connection .bi {
+  position: absolute;
+  width: 6rem;
+}
+.header .tab__item.connection .bi path {
+  fill: #fff;
+}
+.header .tab__item.connection .bi-wifi-off path {
+  fill: #ff681e;
+}
+.header .tab__item.connection .bi-wifi-1 path {
+  fill: #d3212c;
+}
+.header .tab__item.connection .bi-wifi-2 path {
+  fill: #066b3d;
+}
+.header .tab__item.connection .bi-wifi path {
+  fill: #069c56;
+}
+.header .tab__item.connection .bi.hidden-cell {
+  display: none;
+}
+.header .tab__item.connection .status {
+  color: #ff681e;
+  margin-top: 40%;
+}
+.header .search {
+  width: 70%;
+  margin: 5rem auto;
+  display: flex;
+  padding: 0.5rem;
+  border-radius: 5rem;
+  background: rgba(81, 67, 188, 0.2);
+  backdrop-filter: blur(5px);
+  overflow: hidden;
+}
+.header .search i {
+  color: #fff;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+.header .search__box {
+  width: calc(66rem + 50px);
+}
+.header .search__box input {
+  all: unset;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  color: #fff;
+}
+.header .search__clear {
+  display: none;
+}
+.header .row ul {
+  list-style: none;
+  color: #fff;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
+}
+.header .row ul li {
+  border-radius: inherit;
+  padding: 2.5rem;
+  background: rgba(81, 67, 188, 0.2);
+  backdrop-filter: blur(5px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header .row ul li i {
+  font-size: 2rem;
+}
+.header .row ul li span {
+  font-size: 1.7rem;
+}
+.header .row ul li:hover {
+  background: rgba(81, 67, 188, 0.5);
+}
+.header .row ul a:nth-child(1) {
+  border-radius: 0.5rem 0 0 0;
+}
+.header .row ul a:nth-child(4) {
+  border-radius: 0 0.5rem 0 0;
+}
+.header .row ul a:nth-child(13) {
+  border-radius: 0 0 0 0.5rem;
+}
+.header .row ul a:nth-child(16) {
+  border-radius: 0 0 0.5rem 0;
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 10px;
+  font-family: "Poppins", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
