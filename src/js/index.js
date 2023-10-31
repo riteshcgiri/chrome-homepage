@@ -7,13 +7,29 @@ wTemp  = document.querySelector('.weather__temp'),
 wWind  = document.querySelector('#wSpeed'),
 wMin  = document.querySelector('#wMin'),
 wMax  = document.querySelector('#wMax');
-const weather = async(city) =>{
+
+if (navigator.geolocation) {
     
-    const url = `https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=${city}`;
+    navigator.geolocation.getCurrentPosition(function(position) {
+
+      const latitude = position.coords.latitude;
+      const longitude = position.coords.longitude;
+    //   console.log(`Latitude: ${latitude}, Longitude: ${longitude}`);
+      weather(longitude, latitude);
+      
+});
+} else {
+    weather('Delhi');
+  }
+
+
+const weather = async(lon, lat) =>{
+    
+    const url = `https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?lon=${lon}&lat=${lat}`;
     const options = {
         method: 'GET',
         headers: {
-		'X-RapidAPI-Key': 'YOUR_API', //you can get it from rapid api (weather by api ninja)
+		'X-RapidAPI-Key': 'YOUR_API',//your api you can get it from rapid api (weather by api ninja)
 		'X-RapidAPI-Host': 'weather-by-api-ninjas.p.rapidapi.com'
 	}
 };
@@ -24,7 +40,7 @@ try {
     // let obj = new Object(result)
     let obj = JSON.parse(result)
         
-    wLoc.innerText = city + ' In';
+    wLoc.innerText = 'Delhi' ;
     wTemp.innerText = obj.temp + '°C';
     wMin.innerText = obj.min_temp;
     wMax.innerText = obj.max_temp;
@@ -60,5 +76,3 @@ try {
         console.error(error);
     }
 }
-// getting default weather 
-weather('Delhi');
